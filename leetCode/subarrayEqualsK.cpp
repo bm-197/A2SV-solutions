@@ -8,7 +8,7 @@ public:
 
         int prefixSum = 0;
 
-        for (int num : nums) {
+        for (const auto& num : nums) {
             prefixSum += num;
             int target = prefixSum - k;
             if (prefixSumSet.count(target)) {
