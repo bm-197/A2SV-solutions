@@ -12,7 +12,7 @@ public:
         int spaceIndex = 0;
 
         for (int i = 0; i < s.size(); ++i) {
-            if (spaceIndex < spaces.size() && i == spaces[spaceIndex] + 1) {
+            if (spaceIndex < spaces.size() && i == spaces[spaceIndex]) {
                 result += ' ';
                 ++spaceIndex;
             }
@@ -22,22 +22,3 @@ public:
         return result;
     }
 };
-
-
-int main() {
-    Solution sol;
-
-    string s;
-    cin >> s;
-
-    vector<int> v(3);
-    for (int i = 0; i < 4; ++i) {
-        cin >> v[i];
-    }
-    // for (const auto& i: v) cout << i << " ";
-    // cout << endl;
-
-    // cout << s.substr(1, 5);
-    cout << sol.addSpaces(s, v);
-    return 0;
-}
