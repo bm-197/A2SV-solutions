@@ -1,10 +1,19 @@
-for (int i = 0; i < n; ++i) {
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0);
+        cout.tie(0);
+        int n = matrix.size();
+
+        for (int i = 0; i < n; ++i) {
             for (int j = i + 1; j < n; ++j) {
-                std::swap(matrix[i][j], matrix[j][i]);
+                swap(matrix[i][j], matrix[j][i]);
             }
         }
-        
-        // Step 2: Reverse each row
+
         for (int i = 0; i < n; ++i) {
-            std::reverse(matrix[i].begin(), matrix[i].end());
+            reverse(matrix[i].begin(), matrix[i].end());
         }
+    }
+};
