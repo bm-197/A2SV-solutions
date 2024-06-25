@@ -23,7 +23,7 @@ public:
         }
 
         string resultStr(digits.begin(), digits.end());
-        int result = stoi(resultStr);
+        long long result = stoll(resultStr);
 
         if (isNegative) {
             result = -result;
